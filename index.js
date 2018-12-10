@@ -16,8 +16,8 @@ function generateNums() {
 };
 
 function cleanStats(){
-  arrComp = []
   winNumbers = [];
+  arrComp = []
   usrGuess = [];
   logsUser = [];
   attempts = 1
@@ -159,7 +159,6 @@ function findBullsAndCows(win, uGuess){
   else {
     playAgain();
   }
-  comp = win.slice;
 };
 
 function userGuess() {
@@ -193,13 +192,6 @@ function play(arrComp) {
   while( checkAttempts() );
 }
 
-function setUp() {
-  wynNumbers = [];
-  generateNums();
-  arrComp = winNumbers.slice();
-  return arrComp;
-}
-
 function exit() {
   console.log(" ")
   console.log(` Thank you for playing Bulls and Cows!\n\n`);
@@ -214,7 +206,7 @@ function seeInstructions() {
 function startGame() {
   console.log(`\n WELCOME TO BULLS AND COWS`);
   console.log(" ");
-  setUp();
+  cleanStats();
   let optionNumb = readlineSync.question(` What do you want to do?\n (Insert number)\n\n  - 1: Play\n  - 2: See instructions\n  - 3: Exit \n\n`);
   optionNumb = Number(optionNumb.trim());
   if (optionNumb == '1'){
