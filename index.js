@@ -41,6 +41,7 @@ function playNow(){
   else {
     console.log(" ")
     console.log(` Please enter 'y' or 'n'\n\n`)
+    startGame();
   }
 }
 
@@ -53,7 +54,7 @@ function playAgain() {
     play(arrComp);
   }
   else if (playAgain == 'n') {
-    exit()
+    exit();
   }
   else {
     console.log(` Please answer 'y' or 'n'\n`)
@@ -169,7 +170,7 @@ function userGuess() {
   currUserGuess = userInput.replace(/ /g, '');
   if(Number(currUserGuess) == "NaN" || currUserGuess.length !== 4){
     console.log(` Please enter a four digit number!\n`);
-    attempts --;
+    // attempts --;
     userGuess();
   }
   else {
@@ -181,7 +182,7 @@ function userGuess() {
 }
 
 function play(arrComp) {
-  console.log(arrComp);
+  // console.log(arrComp);
   console.log(" ")
   console.log(` Game on!!`)
   console.log(" ");
@@ -195,7 +196,7 @@ function play(arrComp) {
 function exit() {
   console.log(" ")
   console.log(` Thank you for playing Bulls and Cows!\n\n`);
-  process.exit;
+  process.exit(0);
 };
 
 function seeInstructions() {
