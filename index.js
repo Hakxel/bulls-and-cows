@@ -170,7 +170,6 @@ function userGuess() {
   currUserGuess = userInput.replace(/ /g, '');
   if(Number(currUserGuess) == "NaN" || currUserGuess.length !== 4){
     console.log(` Please enter a four digit number!\n`);
-    // attempts --;
     userGuess();
   }
   else {
@@ -182,7 +181,7 @@ function userGuess() {
 }
 
 function play(arrComp) {
-  // console.log(arrComp);
+  // console.log(arrComp); 
   console.log(" ")
   console.log(` Game on!!`)
   console.log(" ");
