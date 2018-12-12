@@ -176,8 +176,8 @@ function userGuess() {
     currUserGuess = currUserGuess.split("")
     usrGuess = currUserGuess.slice(); 
     attempts ++;
+    findBullsAndCows(winNumbers, usrGuess);
   }
-  findBullsAndCows(winNumbers, usrGuess);
 }
 
 function play(arrComp) {
