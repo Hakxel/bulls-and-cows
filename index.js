@@ -169,6 +169,7 @@ function userGuess() {
   userInput = readlineSync.question(` What is your number? \n\n`);
   currUserGuess = userInput.replace(/[\W_]/g, '');
   if(Number(currUserGuess).toString() == "NaN" || currUserGuess.length !== 4){
+    console.log(" ")
     console.log(` Please enter a four digit number!\n`);
     userGuess();
   }
