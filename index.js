@@ -167,16 +167,16 @@ function userGuess() {
   console.log(" ");
   console.log(` Attempt #${attempts}`)
   userInput = readlineSync.question(` What is your number? \n\n`);
-  currUserGuess = userInput.replace(/ /g, '');
-  if(Number(currUserGuess) == "NaN" || currUserGuess.length !== 4){
+  currUserGuess = userInput.replace(/[\W_]/g, '');
+  if(Number(currUserGuess).toString() == "NaN" || currUserGuess.length !== 4){
     console.log(` Please enter a four digit number!\n`);
     userGuess();
   }
   else {
     currUserGuess = currUserGuess.split("")
     usrGuess = currUserGuess.slice(); 
+    attempts ++;
   }
-  attempts ++;
   findBullsAndCows(winNumbers, usrGuess);
 }
 
